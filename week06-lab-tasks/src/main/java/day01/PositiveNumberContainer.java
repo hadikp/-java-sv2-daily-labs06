@@ -10,5 +10,7 @@ public class PositiveNumberContainer {
         doubleNumber.add(number);
     }
 
-
+    public List<Double> getDoubleNumber() {
+        return doubleNumber;
+    }
 }

@@ -12,5 +12,7 @@ public class Main {
             number = sc.nextDouble();
             pnc.numberAdd(number);
         }
+        System.out.println(pnc.getDoubleNumber());
+
     }
 }
