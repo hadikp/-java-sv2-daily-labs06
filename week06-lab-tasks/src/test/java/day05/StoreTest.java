@@ -12,6 +12,7 @@ import static org.junit.jupiter.api.Assertions.*;
 class StoreTest {
 
     Store store;
+    Store sotoreEmpti;
 
     @BeforeEach
     void init() {
@@ -41,8 +42,13 @@ class StoreTest {
         store.AddList(new Product("Retek", ProductType.ZŐLDSÉG, 233));
         assertEquals(ProductType.ZŐLDSÉG, store.setProductByType().get(3).getProductType());
         assertEquals(2, store.setProductByType().get(3).getCount());
+    }
 
-
+    @Test
+    void testStoreListEmpty () {
+        List<Product> productListEmpty = new ArrayList<>();
+        sotoreEmpti = new Store(productListEmpty);
+        assertEquals(0, sotoreEmpti.getProductList().size());
     }
 
 }
